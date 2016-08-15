@@ -9,8 +9,8 @@ function Update () {
 }
 
 function OnTriggerEnter (other : Collider) {
-		Debug.Log("hello world!");
+		//Debug.Log("hello world!");
 		Destroy(other.gameObject);
-		Debug.Log("Object Destroyed!");
+		//Debug.Log("Object Destroyed!");
 
 }

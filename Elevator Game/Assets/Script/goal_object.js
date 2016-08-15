@@ -6,7 +6,7 @@ private var collectRandomGameObjects = new Array ();
 
 private var getY : float;
 private var posY : float;
-private var posX : float = 0.3;
+private var posX : float = 0.03;
 private var posZ : float =  2.9;
 private var randomFirst : float;
 private var randomFirstPosition: float;
@@ -32,14 +32,6 @@ function createInstantes(_collectRandomGameObjects, _posY) {
 }
 
 function Update () {
-/*
-I dont get it to work with the random numbers to get the correct location...it's bugging me fucking much...
-
-try creating an arry to keep the randomized gameobjects
-
-count through the for loop of the gameObjects and make them match the ranodmfirst numbers to be set in the right section
-*/
-
 //as long as checkAllBooleansTrue is true, keep going!
 while(checkAllBooleansTrue){
 
@@ -91,11 +83,6 @@ switch(randomFirst) {
 }
 
 // switch case that creates the instantiate and creates its
-
-    /*
-      try to make a for loop looping through the collectrandomobject array and then figure out how to 
-      change the getY in switch.
-*/
 for(var m=0; m < collectRandomGameObjects.length; m++){
 
   //get correct positions
@@ -121,18 +108,4 @@ for(var m=0; m < collectRandomGameObjects.length; m++){
     Debug.Log("collectRandomGameObjects: " + collectRandomGameObjects);
 
 }//end while loop
-
-
-/*
-need to connect the two sections w/ the cubes. 
-The cube randomized in first place should be located to the first position, and so on...
-must be a number collector for the three diff. position to know which is which,
-*/
-
-//instantiate the gol cubes and their position
-
-
-
-
-
 }//end update

@@ -21,14 +21,19 @@ function Update () {
 	 switch(colorsRandom) {
     case 0:
         color.material.color = y;
+        gameObject.tag = "yellowColor"; //add tag of color
         break;
     case 1:
         color.material.color = g;
+        gameObject.tag = "greenColor";  //add tag of color
         break;
     case 2:
         color.material.color = b;
+        gameObject.tag = "blueColor";   //add tag of color
         break;
 }
+
+//Debug.Log(gameObject.tag);
 
  countdown-= Time.deltaTime;
  if(countdown<=0.0){

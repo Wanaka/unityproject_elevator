@@ -1,5 +1,5 @@
 ﻿#pragma strict
-
+/*
 public var otherGameObject :  GameObject;
 
 private var detectCollisionObject0 : detect_collision_object0;
@@ -28,3 +28,4 @@ function OnTriggerEnter (other : Collider) {
 			Debug.Log(detectCollisionObject0.points + "point"); 
 		}
 }
+*/

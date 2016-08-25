@@ -13,6 +13,7 @@ private var colorsRandom : int;
 //scoring system
 public var checkCollision : boolean = false;
 private var scoreValue : int;
+private var lifeValue : int;
 private var uiText : scoreText;
 
 function Start () {
@@ -22,6 +23,7 @@ function Start () {
 
     //section of the uitext script and scoring point system
     scoreValue=1;
+    lifeValue = -1;
 
     var uiTextObject : GameObject = GameObject.FindWithTag ("uitext"); //WORKS
     if (uiTextObject != null)
@@ -81,10 +83,12 @@ function OnTriggerEnter (other : Collider) {
             //uiText.AddScore(scoreValue); // works
             checkCollision = true;
             Debug.Log("blue works");
-           // Destroy(gameObject);
+            //Destroy(gameObject);
         } else{
             //Debug.Log("NOO wrong blockssss");
             Destroy(gameObject);
+            //if the wrong block as been detected then remove a life (-1)
+            uiText.RemoveLife(lifeValue); 
         }
 
         if(checkCollision){
